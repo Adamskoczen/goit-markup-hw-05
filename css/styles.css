@@ -69,6 +69,30 @@ ul li {
   font-weight: 500;
 }
 
+.top .active-index::after {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  content: "";
+  width: 53px;
+  height: 4px;
+  background-color: var(--color-logo);
+  border-radius: 2px;
+  top:31px;
+}
+
+.top .active-portfolio::after {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  content: "";
+  width: 58px;
+  height: 4px;
+  background-color: var(--color-logo);
+  border-radius: 2px;
+  top: 31px;
+}
+
 .top .contacts-top {
   display: flex;
   justify-content: flex-end;
@@ -80,6 +104,15 @@ ul li {
   position: relative;
   top: 5px;
   right: 7px;
+}
+
+.link {
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-main);
+  line-height: 1.173;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -100,14 +133,6 @@ ul li {
 .top ul {
   display: flex;
   list-style-type: none;
-}
-
-.link {
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-main);
-  line-height: 1.173;
-  letter-spacing: 0.02em;
 }
 
 .contact {
@@ -197,11 +222,28 @@ ul li {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-sections p,
 .portfolio-sections p {
   color: var(--color-contact);
+}
+
+.portfolio-sections .section-filter button {
+  font-family: "roboto";
+  background-color: var(--color-bg-section);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+  text-align: center;
+  border-radius: 4px;
+  border: 0;
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-sections .section-header button:hover,
@@ -220,7 +262,6 @@ ul li {
   background-color: var(--color-logo);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .section-lorem ul:first-child li .icon {
@@ -276,10 +317,33 @@ ul li {
   margin-bottom: 50px;
 }
 
+.main-sections .section-do li {
+  position: relative;
+}
+
 .main-sections .section-do ul {
   display: flex;
   justify-content: space-around;
   padding-left: 0;
+}
+
+.main-sections .section-do div {
+  position: absolute;
+  bottom: 3px;
+  background-color: var(--color-bg-main);
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-sections .section-do h4 {
+  color: var(--color-white);
+  line-height: 1.142;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .main-sections .section-team {
@@ -350,6 +414,7 @@ ul li {
   height: 92px;
   width: 170px;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-sections .section-clients .icon {
@@ -357,6 +422,7 @@ ul li {
   height: 70px;
   width: 120px;
   margin-left: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-sections .section-clients li:hover,
@@ -384,19 +450,6 @@ ul li {
   margin-right: 8px;
 }
 
-.portfolio-sections .section-filter button {
-  font-family: "roboto";
-  background-color: var(--color-bg-section);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.625;
-  letter-spacing: 0.03em;
-  text-align: center;
-  border-radius: 4px;
-  border: 0;
-  padding: 6px 22px;
-}
-
 .portfolio-sections .section-grid {
   padding-top: 0;
 }
@@ -408,6 +461,10 @@ ul li {
   row-gap: 30px;
   padding-left: 0;
   font-size: 0;
+}
+
+.portfolio-sections .section-grid li {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-sections .section-grid li:hover {
@@ -510,6 +567,8 @@ ul li {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:nth-child(2) {
